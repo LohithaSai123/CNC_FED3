@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Contact Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 450px;
+      backdrop-filter: blur(6px);
+    }
+
+    .form-wrapper img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-wrapper h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-wrapper input,
+    .form-wrapper textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    .form-wrapper input:focus,
+    .form-wrapper textarea:focus {
+      border-color: #007BFF;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+      outline: none;
+    }
+
+    .form-wrapper button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .form-wrapper button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .form-wrapper button:focus {
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    }
+
+    @media (max-width: 500px) {
+      .form-wrapper {
+        margin: 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-wrapper">
+    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Contact Icon">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent actual submission
+      // Optional: Add a confirmation message or animation
+      window.location.href = "navigation.html"; // Redirect to your navigation page
+    });
+  </script>
+</body>
+</html>
